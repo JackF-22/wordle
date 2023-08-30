@@ -229,7 +229,7 @@ function checkRow(inputs, backs, inner) {
         }
         else {
             for (let j = 0; j < 5; j++) {
-                if (inputs[j].value.toUpperCase() === todaysWord[i] && yellowIndices.includes(i) == false) {
+                if (inputs[j].value.toUpperCase() === todaysWord[i] && yellowIndices.includes(i) == false && greenIndices.includes(j) == false) {
                     yellowIndices += i;
                     backs[j].style.backgroundColor = "#c9c751";
                     boxes[j].style.backgroundColor = "#c9c751";
