@@ -86,6 +86,10 @@ input.night {
   padding-bottom: 25px;
 }
 
+.popup button {
+  color: black;
+}
+
 .popup.night {
   color: white;
   background-color: rgb(73, 73, 73);
