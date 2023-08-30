@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body {
+  text-align: center;
+  overflow-x: hidden;
+  width: 100%;
+  text-align: center;
+}
+
+hr.night {
+  border: 0.5px solid rgb(81, 81, 81);
+}
+
+.lightbtn {
+  position: absolute;
+  right: 25px;
+  top: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 2rem;
+  color: black;
+}
+
+.lightbtn.night {
+  color: white;
+}
+
+body.night {
+  background-color: rgb(29, 28, 28);
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+}
+
+h1 {
+  padding: 20px;
+  font-family: 'Patua One', cursive;
+  font-size: 2.3rem;
+}
+
+h1.night {
+  color: white;
+}
+
+input {
+  height: 60px;
+  width: 60px;
+  outline: none;
+  border: 2px solid lightgrey;
+  caret-color: transparent;
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Red Hat Display', sans-serif;
+  transition: background-color 1s ease-in-out;
+  background: transparent;
+}
+
+input.night {
+  color: white;
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35%;
+  display: none;
+  background-color: white;
+  z-index: 5;
+  text-align: center;
+  color: black;
+  font-family: 'Red Hat Display', sans-serif;
+  padding-bottom: 25px;
+}
+
+.popup.night {
+  color: white;
+  background-color: rgb(73, 73, 73);
+}
+
+.popup button {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  height: 35px;
+  width: 35px;
+  border-radius: 25px;
+  border: 1px solid black;
+  background-color: white;
+  cursor: pointer;
+}
+
+.layer {
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  opacity: 0.7;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.row {
+  margin-top: 10px;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.row div {
+  margin: 2px;
+}
+
+/* Card Flip */
+.flip-card {
+  width: 60px;
+  height: 60px;
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  background: transparent;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+  background: transparent;
+}
+
+/* Style the back side */
+.flip-card-back {
+  color: white;
+  transform: rotateX(180deg);
+}
+
+.flip-card-inner.active {
+  transform: translateY(5px) rotateX(-180deg);
+}
+
+.flip-card-back p {
+  height: 100%;
+  width: 100%;
+  color: white;
+  line-height: 55px;
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+  font-family: 'Red Hat Display', sans-serif;
+  border: none;
+  background-color: gray;
+}
+
+.poprow {
+  display: flex;
+  justify-content: center;
+}
+
+.poprow p {
+  height: 50px;
+  width: 50px;
+  margin: 4px;
+  background-color: grey;
+}
+
+.keyboard {
+  margin-top: 4vh;
+}
+
+.keyboard button {
+  color: black;
+  width: 45px;
+  height: 60px;
+  border-radius: 5px;
+  margin: 3px 1px;
+  border: none;
+  background-color: lightgray;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.4rem;
+  outline: none;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.enter,
+.delete {
+  width: 80px;
+  font-size: 1rem;
+}
+
+#bb {
+  color: black;
+  font-size: 1.7rem;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+#bb.night {
+  color: white;
+}
+
+@media screen and (max-width: 500px) {
+  .keyboard button {
+    width: 30px;
+    height: 45px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .enter,
+  .delete {
+    width: 60px;
+  }
+
+  .lightbtn {
+    top: 15px;
+    right: 15px;
+  }
+
+  .popup {
+    width: 90%;
+  }
+}

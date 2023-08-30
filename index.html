@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Wordle</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pridi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@800&display=swap" rel="stylesheet">
+</head>
+<body id="body" onload="readAttribute()">
+    <h1>Wordle (By Jack)</h1>
+    <button class="lightbtn" onclick="lightToggle()"><i class="fa-solid fa-moon"></i></button>
+    <hr><br>
+    <div class="container">
+        <div class="row rowone" id="rowone">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" class="active startrow" id="one">
+                  </div>
+                  <div class="flip-card-back">
+                    <p>Hello</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" readonly id="two">
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" readonly id="three">
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" readonly id="four">
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" readonly class="endrow" id="five">
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="row rowtwo" id="rowtwo">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" class="active startrow">
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" readonly>
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" readonly>
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" readonly>
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" readonly class="endrow">
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="row rowthree" id="rowthree">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" class="startrow">
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" readonly>
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" readonly>
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" readonly>
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" readonly class="endrow">
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="row rowfour" id="rowfour">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" class="startrow">
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" readonly>
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" readonly>
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" readonly>
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" readonly class="endrow">
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="row rowfive" id="rowfive">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" class="startrow">
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" readonly>
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" readonly>
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" readonly>
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" readonly class="endrow">
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="row rowsix" id="rowsix">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" class="startrow">
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" readonly>
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" readonly>
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" readonly>
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <input maxlength=1 type="text" readonly class="endrow">
+                  </div>
+                  <div class="flip-card-back">
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+        </div>
+    <div class="keyboard">
+        <button type="button" id="q">Q</button>
+        <button id="w">W</button>
+        <button id="e">E</button>
+        <button id="r">R</button>
+        <button id="t">T</button>
+        <button id="y">Y</button>
+        <button id="u">U</button>
+        <button id="i">I</button>
+        <button id="o">O</button>
+        <button id="p">P</button>
+        <br>
+        <button id="a">A</button>
+        <button id="s">S</button>
+        <button id="d">D</button>
+        <button id="f">F</button>
+        <button id="g">G</button>
+        <button id="h">H</button>
+        <button id="j">J</button>
+        <button id="k">K</button>
+        <button id="l">L</button>
+        <br>
+        <button style="width: 80px; font-size: 1rem;" id="Enter">ENTER</button>
+        <button id="z">Z</button>
+        <button id="x">X</button>
+        <button id="c">C</button>
+        <button id="v">V</button>
+        <button id="b">B</button>
+        <button id="n">N</button>
+        <button id="m">M</button>
+        <button style="width: 80px; font-size: 1rem;" id="Backspace"><i class="fa-solid fa-delete-left"></i></button>
+    </div>
+    <div class="popup">
+        <h1 id="title" style="font-family: 'Red Hat Display', sans-serif;">You Win!!!</h1>
+        <button onclick="removePopup()">X</button>
+        <div class="popupdiv">
+            <div class="poprow">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+            <div class="poprow">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+            <div class="poprow">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+            <div class="poprow">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+            <div class="poprow">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+            <div class="poprow">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+        <br><br>
+        <div id="bb">Come Back Tomorrow: </div>
+    </div>
+
+    <div class="layer"></div>
+</body>
+<script src="index.js"></script>
+<script src="https://kit.fontawesome.com/e906391d90.js" crossorigin="anonymous"></script>
+</html>
